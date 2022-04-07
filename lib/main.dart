@@ -6,6 +6,7 @@ import 'package:grocery/providers/cart_provider.dart';
 import 'package:grocery/providers/item_provider.dart';
 import 'package:grocery/providers/order_provider.dart';
 import 'package:grocery/providers/user_provider.dart';
+import 'package:grocery/screens/additemscreen/add_item_screen.dart';
 import 'package:grocery/screens/cart/cart_screen.dart';
 import 'package:grocery/screens/home/home_screen.dart';
 import 'package:grocery/screens/order_screen/order_screen.dart';
@@ -81,6 +82,7 @@ class MyApp extends StatelessWidget {
           CartScreen.id: (context) => CartScreen(),
           Profile.id: (context) => Profile(),
           OrdersScreen.id: (context) => OrdersScreen(),
+          AddProduct.id: (context) => AddProduct()
 
         },
       ),

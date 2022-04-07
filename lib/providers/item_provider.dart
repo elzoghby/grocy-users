@@ -43,7 +43,38 @@ class ItemsProvider with ChangeNotifier {
 
   }
 
+  addItem(
+      {required String category,
+      required String name,
+      required String desc,
+      required double price,
+      required File image,
+      required String id}) async {
+    final imageUrl = await DatabaseMethods().getItemPic(name, image);
+    Item item = Item(
+        id: id,
+        category: category,
+        description: desc,
+        imageUrl: imageUrl,
+        price: price,
+        name: name,
+        isFavorite: false);
+    final success = await DatabaseMethods().addItem(item);
 
+    if (success==true) {
+      _items.add(item);
+      notifyListeners();
+      return true;
+    } else {
+      return success;
+    }
+  }
+
+  removeProduct(String id) {
+    _items.removeWhere((element) => element.id == id);
+    notifyListeners();
+    DatabaseMethods().removeItem(id);
+  }
 
   searchForProduct(String title) {
     List<Item> searchedProducts = [];
