@@ -216,31 +216,5 @@ class  DatabaseMethods {
     return myList;
   }
 
-  getItemPic(String name, File fileImage) async {
-    final ref =
-        FirebaseStorage.instance.ref().child('items').child(name + '.png');
-     ref.putFile(fileImage).snapshot;
-    final url = await ref.getDownloadURL();
-    return url;
-  }
 
-  addItem(Item item) async {
-    try{await refItems.doc(item.id).set({
-      'id': item.id,
-      'name': item.name,
-      'category': item.category,
-      'desc': item.description,
-      'imageUrl': item.imageUrl,
-      'price': item.price,
-    });
-    return true;
-  }
-  catch(e){
-      return e;
-  }
-  }
-
-  removeItem(String id) async {
-    refItems.doc(id).delete();
-  }
 }
