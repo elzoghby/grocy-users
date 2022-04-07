@@ -3,8 +3,9 @@ import 'package:grocery/providers/user_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../components/constants.dart';
+import '../home/home_screen.dart';
 
-\
+
 
 
 class UserScreen extends StatelessWidget {
