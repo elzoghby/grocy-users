@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import '../../components/constants.dart';
 
-import '../additemscreen/add_item_screen.dart';
+\
 
 
 class UserScreen extends StatelessWidget {
@@ -95,7 +95,7 @@ class UserScreen extends StatelessWidget {
                     } else {
                       final success = await Provider.of<UserProvider>(context, listen: false).userInfo(email!, name!,phone!, address!,true);
                       if (success == true) {
-                        Navigator.pushNamed(context, AddProduct.id);
+                        Navigator.pushNamed(context, Home.id);
                       } else {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(

@@ -82,8 +82,7 @@ class MyApp extends StatelessWidget {
           CartScreen.id: (context) => CartScreen(),
           Profile.id: (context) => Profile(),
           OrdersScreen.id: (context) => OrdersScreen(),
-          AddProduct.id: (context) => AddProduct()
-          //OrdersScreen.id: (context) => OrdersScreen(),
+
         },
       ),
     );

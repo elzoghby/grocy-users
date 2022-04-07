@@ -20,7 +20,7 @@ class Home extends StatefulWidget {
 Future<void> fetcher(BuildContext context) async {
   Provider.of<ItemsProvider>(context, listen: false).fetchItems();
   Provider.of<CartProvider>(context, listen: false).fetchCarts();
-   Provider.of<UserProvider>(context, listen: false).fetch();
+
 }
 
 class _HomeState extends State<Home> {

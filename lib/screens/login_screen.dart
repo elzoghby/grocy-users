@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 
 import 'package:firebase_auth/firebase_auth.dart';
 
-import 'package:grocery/screens/additemscreen/add_item_screen.dart';
+
+import 'package:grocery/screens/home/home_screen.dart';
 
 import 'package:grocery/services/auth.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -71,7 +72,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     final success = await AuthMethods().logIn(
                         email!, password!);
                     if (success==true) {
-                      Navigator.pushNamed(context, AddProduct.id);
+                      Navigator.pushNamed(context, Home.id);
 
                     }
 
