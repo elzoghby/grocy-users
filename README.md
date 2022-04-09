@@ -1,6 +1,6 @@
 # grocery
 
-A new Flutter project.
+A grocery store app users version
 
 ## Getting Started
 
